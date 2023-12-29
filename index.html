@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platformer</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+      }
+
+      #game {
+        margin: 10px;
+      }
+
+      #gameArea {
+        width: 100%;
+        position: relative;
+        padding-top: 56.25%; /* Untuk menjaga aspek rasio canvas (16:9) */
+      }
+
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Gaya untuk overlay */
+      .overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+      }
+
+      /* Gaya untuk kotak pesan */
+      .message-box {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        max-width: 300px;
+        position: relative;
+      }
+
+      /* Gaya untuk tombol OK */
+      .ok-button {
+        background-color: #0074cc;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      src="https://wandah.org/js/gameLib.js"
+    ></script>
+  </head>
+  <body>
+    <div id="game">
+      <div id="gameArea"><canvas id="canvas"></canvas></div>
+    </div>
+    <script type="text/javascript" src="js/map_1.js"></script>
+    <script type="text/javascript" src="js/map_2.js"></script>
+    <script type="text/javascript" src="js/map_3.js"></script>
+    <script type="text/javascript" src="js/map_4.js"></script>
+    <script type="text/javascript" src="js/map_6.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+  </body>
+</html>
